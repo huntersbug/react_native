@@ -10,7 +10,11 @@ export default class Men extends Component {
       <Image style={{ width: 150, height: 200 }} source={{ uri: item.image }} />
       <Text style={{ width: 250 }}>{item.title}</Text>
       <Text style={styles.price}>Rs:{item.price}</Text>
-      <Button title="Buy now" />
+      <View style={styles.buttoncart}>
+        <Button title="Buy now"  color={"orange"}/>
+        <Button title="Add to Cart" />
+
+      </View>
     </View>
   );
   render() {
@@ -56,4 +60,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 20,
   },
+  buttoncart: {
+    width: "100%",
+padding:20,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+  }
 });

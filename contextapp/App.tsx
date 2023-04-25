@@ -13,11 +13,8 @@ export default function App() {
       <NavigationContainer>
         <ContextProvider>
           <Drawer />
-
         </ContextProvider>
       </NavigationContainer>
-
-
     </>
   );
 }

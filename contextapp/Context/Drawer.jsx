@@ -5,7 +5,7 @@ import Home from "../Components/Home";
 import Women from "../Components/Women";
 import Men from "../Components/Men";
 import Cart from "../Components/Cart";
-import Signup from "../Components/Signup";
+
 
 
 let Routeobj = [
@@ -13,7 +13,7 @@ let Routeobj = [
   { name: "Women", component: Women },
   { name: "Men", component: Men },
   { name: "Cart", component: Cart },
-  { name: "Signup", component: Signup },
+
 
 ];
 export default class Drawer extends Component {
