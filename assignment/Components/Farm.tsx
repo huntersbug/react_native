@@ -5,7 +5,9 @@ import {
   Image,
   ProgressBarAndroid,
   ActivityIndicator,
-  ScrollView
+  ScrollView,
+  Button,
+  Pressable,
 } from "react-native";
 import React, { Component } from "react";
 import HalfpieChart from "./HalfpieChart";
@@ -21,9 +23,11 @@ export default class Farm extends Component {
         </View>
 
         <View style={styles.middel}>
-          <ScrollView horizontal style={{ width: '100%' }} showsHorizontalScrollIndicator={false} >
-
-
+          <ScrollView
+            horizontal
+            style={{ width: "100%" }}
+            showsHorizontalScrollIndicator={false}
+          >
             <View style={styles.cart}>
               <Text style={{ marginLeft: 2, color: "grey" }}>
                 Post Management
@@ -96,8 +100,12 @@ export default class Farm extends Component {
 
         <View style={styles.progress}>
           <View style={styles.progresstext}>
-            <Text style={{ fontWeight: "700", fontSize: 17 }}>Crop Progress</Text>
-            <Text style={{ color: "skyblue", fontSize: 15 }}>15 Days agter Showing</Text>
+            <Text style={{ fontWeight: "700", fontSize: 17 }}>
+              Crop Progress
+            </Text>
+            <Text style={{ color: "skyblue", fontSize: 15 }}>
+              15 Days after Showing
+            </Text>
           </View>
           <ProgressBarAndroid
             styleAttr="Horizontal"
@@ -105,7 +113,12 @@ export default class Farm extends Component {
             progress={0.3}
             style={{ transform: [{ scaleX: 1 }, { scaleY: 4 }] }}
           />
-
+        </View>
+        <View style={styles.button}>
+          <Text>18 Total Activities</Text>
+         
+       
+          <Button title="veiw all" color={"orange"} />
         </View>
       </View>
     );
@@ -123,7 +136,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
 
     width: "85%",
-    marginTop: 20,
+    marginTop: 30,
     marginLeft: "auto",
     marginRight: "auto",
     backgroundColor: "#D3D3D3",
@@ -134,7 +147,7 @@ const styles = StyleSheet.create({
 
     width: "100%",
     height: 100,
-    marginTop: 20,
+    marginTop: 40,
     marginLeft: "auto",
     marginRight: "auto",
     backgroundColor: "#D3D3D3",
@@ -146,7 +159,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   cart: {
-    marginTop: 10,
+    marginTop: 30,
     width: "30%",
     height: 100,
     backgroundColor: "#D3D3D3",
@@ -159,15 +172,14 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   progress: {
-    marginTop: 10,
+    marginTop: 30,
     marginLeft: 15,
     marginRight: 15,
 
-
     height: 80,
     justifyContent: "space-evenly",
-    backgroundColor: '#fff',
-    shadowColor: '#000',
+    backgroundColor: "#fff",
+    shadowColor: "#000",
 
     shadowOpacity: 0.2,
     shadowRadius: 2,
@@ -177,5 +189,22 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     paddingHorizontal: 3,
-  }
+  },
+  button:{
+flexDirection:"row",
+justifyContent:"space-between",
+marginLeft:10,
+marginRight:10,
+marginTop:20
+  },
+
+  button1: {
+    backgroundColor: 'blue',
+    borderRadius: 10,
+    padding: 10,
+  },
+  text: {
+    color: 'white',
+    textAlign: 'center',
+  },
 });
