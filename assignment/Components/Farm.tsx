@@ -116,8 +116,6 @@ export default class Farm extends Component {
         </View>
         <View style={styles.button}>
           <Text>18 Total Activities</Text>
-         
-       
           <Button title="veiw all" color={"orange"} />
         </View>
       </View>
@@ -190,21 +188,21 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingHorizontal: 3,
   },
-  button:{
-flexDirection:"row",
-justifyContent:"space-between",
-marginLeft:10,
-marginRight:10,
-marginTop:20
+  button: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 20,
   },
 
   button1: {
-    backgroundColor: 'blue',
+    backgroundColor: "blue",
     borderRadius: 10,
     padding: 10,
   },
   text: {
-    color: 'white',
-    textAlign: 'center',
+    color: "white",
+    textAlign: "center",
   },
 });
